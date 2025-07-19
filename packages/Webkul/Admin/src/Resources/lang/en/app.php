@@ -170,7 +170,7 @@ return [
             ],
 
             'create' => [
-                'add-to-cart'             => 'Add to Cart',
+                'add-to-cart'             => 'Add To Cart',
                 'back-btn'                => 'Back',
                 'check-billing-address'   => 'Billing address is missing.',
                 'check-shipping-address'  => 'Shipping address is missing.',
@@ -305,7 +305,7 @@ return [
                 ],
 
                 'cart-items' => [
-                    'add-to-cart'       => 'Add to Cart',
+                    'add-to-cart'       => 'Add To Cart',
                     'delete'            => 'Delete',
                     'empty-description' => 'No items found in your cart.',
                     'empty-title'       => 'Empty Cart',
@@ -316,7 +316,7 @@ return [
                 ],
 
                 'recent-order-items' => [
-                    'add-to-cart'       => 'Add to Cart',
+                    'add-to-cart'       => 'Add To Cart',
                     'empty-description' => 'No items found in your recent orders.',
                     'empty-title'       => 'Empty Orders',
                     'see-details'       => 'See Details',
@@ -326,7 +326,7 @@ return [
                 ],
 
                 'wishlist-items' => [
-                    'add-to-cart'       => 'Add to Cart',
+                    'add-to-cart'       => 'Add To Cart',
                     'delete'            => 'Delete',
                     'empty-description' => 'No items found in your wishlist.',
                     'empty-title'       => 'Empty Wishlist Items',
@@ -336,7 +336,7 @@ return [
                 ],
 
                 'compare-items' => [
-                    'add-to-cart'       => 'Add to Cart',
+                    'add-to-cart'       => 'Add To Cart',
                     'delete'            => 'Delete',
                     'empty-description' => 'No items found in your compare list.',
                     'empty-title'       => 'Empty Compare Items',

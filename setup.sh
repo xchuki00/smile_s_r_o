@@ -27,14 +27,14 @@ while ! docker exec ${db_container_id} mysql --user=root --password=root -e "CRE
 done
 
 # setting up bagisto
-echo "Now, setting up Bagisto..."
-docker exec ${apache_container_id} git clone https://github.com/bagisto/bagisto
-
-echo "Now, setting up Bagisto stable version..."
-docker exec -i ${apache_container_id} bash -c "cd bagisto && git reset --hard v2.3.0"
-
-docker exec ${apache_container_id} cp -r bagisto/* .
-docker exec ${apache_container_id} rm -rf bagisto
+#echo "Now, setting up Bagisto..."
+#docker exec ${apache_container_id} git clone https://github.com/bagisto/bagisto
+#
+#echo "Now, setting up Bagisto stable version..."
+#docker exec -i ${apache_container_id} bash -c "cd bagisto && git reset --hard v2.3.0"
+#
+#docker exec ${apache_container_id} cp -r bagisto/* .
+#docker exec ${apache_container_id} rm -rf bagisto
 # installing composer dependencies inside container
 docker exec -i ${apache_container_id} bash -c "composer install"
 

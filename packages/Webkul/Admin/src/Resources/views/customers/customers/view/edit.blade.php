@@ -147,7 +147,7 @@
                                 <x-admin::form.control-group.label class="required">
                                     @lang('admin::app.customers.customers.view.edit.gender')
                                 </x-admin::form.control-group.label>
-            
+
                                 <x-admin::form.control-group.control
                                     type="select"
                                     name="gender"
@@ -171,7 +171,12 @@
             
                                 <x-admin::form.control-group.error control-name="gender" />
                             </x-admin::form.control-group>
-            
+                            <x-admin::form.control-group>
+                            <x-admin::form.control-group.label for="credit_points">Credit Points
+                            </x-admin::form.control-group.label>
+                                <input type="text" class="control" name="credit_points" value="{{ old('credit_points', $customer->credit_points) }}" />
+                            </x-admin::form.control-group>
+
                             <!-- Customer Group -->
                             <x-admin::form.control-group class="w-full">
                                 <x-admin::form.control-group.label>

@@ -4,6 +4,7 @@ namespace Webkul\Shop\Http\Controllers\API;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Webkul\CartRule\Repositories\CartRuleCouponRepository;
 use Webkul\Checkout\Facades\Cart;
 use Webkul\Checkout\Models\CartAddress;
@@ -47,6 +48,12 @@ class CartController extends APIController
      */
     public function store()
     {
+        if (!Auth::guard('customer')->check()) {
+            return response()->json([
+                'redirect_uri' => route('shop.customer.session.index'),
+                'message'      => 'Přihlaste se, abyste mohli přidávat produkty do košíku.',
+            ], Response::HTTP_BAD_REQUEST);
+        }
         $this->validate(request(), [
             'product_id' => 'required|integer|exists:products,id',
         ]);
@@ -67,7 +74,6 @@ class CartController extends APIController
             }
 
             $cart = Cart::addProduct($product, request()->all());
-
             return new JsonResource(array_merge([
                 'data'    => new CartResource($cart),
                 'message' => trans('shop::app.checkout.cart.item-add-to-cart'),

@@ -77,11 +77,11 @@
 
             <div class="grid w-full grid-cols-[2fr_3fr] border-b border-zinc-200 px-8 py-3 max-md:px-0">
                 <p class="text-sm font-medium">
-                    @lang('shop::app.customers.account.profile.index.gender')
+                    @lang('shop::app.customers.account.profile.index.credits')
                 </p>
 
                 <p class="text-sm font-medium text-zinc-500">
-                    {{ $customer->gender ?? '-'}}
+                    {{ $customer->credit_points ?? '-'}}
                 </p>
             </div>
 

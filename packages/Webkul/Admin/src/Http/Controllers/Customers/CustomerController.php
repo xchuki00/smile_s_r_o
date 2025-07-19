@@ -152,6 +152,7 @@ class CustomerController extends Controller
             'customer_group_id',
             'status',
             'is_suspended',
+            'credit_points'
         ]);
 
         if (empty($data['phone'])) {
