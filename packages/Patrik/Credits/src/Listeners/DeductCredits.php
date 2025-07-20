@@ -21,13 +21,9 @@ class DeductCredits
      */
     public function handle($event)
     {
-        $order = $event->order;
+            $customer = $event->customer;
 
-        if ($order->payment->method === 'credits') {
-            $customer = $order->customer;
-
-            $customer->credit_points -= $order->grand_total;
+            $customer->credit_points -= $event->grand_total;
             $customer->save();
-        }
     }
 }

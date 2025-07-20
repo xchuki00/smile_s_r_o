@@ -243,6 +243,7 @@ return [
         Webkul\Tax\Providers\TaxServiceProvider::class,
         Webkul\Theme\Providers\ThemeServiceProvider::class,
         Webkul\User\Providers\UserServiceProvider::class,
-        \Patrik\Credits\Providers\CreditsServiceProvider::class
+        \Patrik\Credits\Providers\CreditsServiceProvider::class,
+        \Patrik\Credits\Providers\EventServiceProvider::class
     ],
 ];
