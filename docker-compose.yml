@@ -16,6 +16,13 @@ services:
     volumes:
       - ./:/var/www/html/
 
+  bagisto-php-queue:
+    entrypoint: php artisan queue:work --tries=3 --timeout=60
+    restart: unless-stopped
+    image: bagisto-php-apache
+    volumes:
+      - ./:/var/www/html/
+
   bagisto-mysql:
     image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
