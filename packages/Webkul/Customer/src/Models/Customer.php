@@ -60,7 +60,8 @@ class Customer extends Authenticatable implements CustomerContract
         'status',
         'is_verified',
         'is_suspended',
-        'credit_points'
+        'credit_points',
+        'picked_amount'
     ];
 
     /**

@@ -84,7 +84,14 @@
                     {{ $customer->credit_points ?? '-'}}
                 </p>
             </div>
-
+            <div class="grid w-full grid-cols-[2fr_3fr] border-b border-zinc-200 px-8 py-3 max-md:px-0">
+                <p class="text-sm font-medium">
+                    Nasbíraný materiál celkem
+                </p>
+                <p class="text-sm font-medium text-zinc-500">
+                    {{ $customer->picked_amount ?? '-'}} Kg
+                </p>
+            </div>
             {!! view_render_event('bagisto.shop.customers.account.profile.gender.after') !!}
 
             {!! view_render_event('bagisto.shop.customers.account.profile.date_of_birth.before') !!}

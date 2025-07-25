@@ -176,7 +176,11 @@
                             </x-admin::form.control-group.label>
                                 <input type="text" class="control" name="credit_points" value="{{ old('credit_points', $customer->credit_points) }}" />
                             </x-admin::form.control-group>
-
+                            <x-admin::form.control-group>
+                                <x-admin::form.control-group.label for="picked_amount">Nasbírané množství v KG
+                                </x-admin::form.control-group.label>
+                                <input type="text" class="control" name="picked_amount" value="{{ old('picked_amount', $customer->picked_amount) }}" />
+                            </x-admin::form.control-group>
                             <!-- Customer Group -->
                             <x-admin::form.control-group class="w-full">
                                 <x-admin::form.control-group.label>

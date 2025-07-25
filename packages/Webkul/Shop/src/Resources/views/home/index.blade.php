@@ -48,34 +48,28 @@
                                 <span class="text-sm text-gray-500">Kredity</span>
                                 <div class="text-xl font-bold text-green-600"> {{ auth()->guard('customer')->user()->credit_points }}</div>
                             </div>
-
                             <div class="mt-4">
-                                <span class="text-sm text-gray-500">Nasbíraný scrap</span>
-                                <div class="text-xl font-bold text-orange-500">17 kusů</div>
+                                <span class="text-sm text-gray-500">Nasbíraný materiál celkem</span>
+                                <div class="text-xl font-bold text-green-600"> {{ auth()->guard('customer')->user()->picked_amount }}Kg</div>
                             </div>
                         </div>
                     </div>
-
-
                 @endif
                 @break
             @case ($customization::STATIC_CONTENT)
-                @if( $customization['name'] !== 'Offer Information')
                 <!-- push style -->
-                    @if (! empty($data['css']))
-                        @push ('styles')
-                            <style>
-                                {{ $data['css'] }}
-                            </style>
-                        @endpush
-                    @endif
-
-                    <!-- render html -->
-                    @if (! empty($data['html']))
-                        {!! $data['html'] !!}
-                    @endif
+                @if (! empty($data['css']))
+                    @push ('styles')
+                        <style>
+                            {{ $data['css'] }}
+                        </style>
+                    @endpush
                 @endif
 
+                <!-- render html -->
+                @if (! empty($data['html']))
+                    {!! $data['html'] !!}
+                @endif
                 @break
             @case ($customization::CATEGORY_CAROUSEL)
                 <!-- Categories carousel -->
